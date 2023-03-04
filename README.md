@@ -20,6 +20,7 @@ The iterative approach calculates the nth number by starting from the first two 
 To compare the algorithms, we will find the nth number of the Fibonacci series for a range of values of n, from 1 to 100. We will then measure the execution time of each algorithm and compare their performance.
 
 There are multiple ways to implement the Fibonacci Series with code, each discussed in more detail below. However, for the implementations used in this report, the following chart represents the Big O value.
+
 <img width="394" alt="Screenshot 2023-03-03 at 10 19 07 PM" src="https://user-images.githubusercontent.com/113164818/222873907-eba9239e-7e39-4cd9-8e69-702bb26ac128.png">
 
 ## Empirical Data & Discussion 
