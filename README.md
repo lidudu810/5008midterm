@@ -27,12 +27,13 @@ The iterative version of the Fibonacci Series implementation has two nested for 
 
 The recursive version of the Fibonacci Series implementation is given in pseudocode below:
 
-`for i..n 
+`code`
+for i..n 
     RV(n, i) 
 
 RV(n,i) "\n"
    if i == 1 or i == n: return 1 
-   return  RV(n - 1, i) + RV(n - 1, i - 1)`
+   return  RV(n - 1, i) + RV(n - 1, i - 1)
 
 Each row of the Fibonacci sequence contains one more element than the previous row. To generate the nth term, the algorithm must calculate n elements, each of which is the sum of two elements in the previous row. This means that the algorithm must make O(2^n) recursive calls to generate the entire nth term. However, the only memory it needs to keep is the final term itself (or if printing, no memory is used), making the space used either O(1) or O(n).
 
