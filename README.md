@@ -43,6 +43,10 @@ The dynamic programming version of the Fibonacci Series implementation stores th
 For this analysis, I selected Python as my second language. The reason for this selection, other than it being a well-known language, is that it has built-in functions to assist with dynamic programming, such as lru_cache and cache in the built-in functools library. This allowed me to experiment with the built-in tools while also writing in a language designed for quick development and experimentation.
 
 ## Empirical Data & Discussion 
+For all empirical results, I maxed out the time interval to 60 seconds. This allowed for execution of code in a timely manner, while still being able to run multiple iterations.
+The iterative and dynamic programming versions are much faster than the recursive versions.
+**Recursive Versions**
+
 
 
 ## Language Analysis
