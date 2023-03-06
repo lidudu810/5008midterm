@@ -52,8 +52,8 @@ The iterative and dynamic programming versions are much faster than the recursiv
 ![Recursive P](https://user-images.githubusercontent.com/113164818/223066771-5d79348d-1902-4d61-81dd-1fe4e4e1f963.png)
 Compare to Python and C, C has much more quicker than python, we can see the difference during the chart.
 
-**Iterative and Dynamic Programming Versions**
 
+**Iterative and Dynamic Programming Versions**
 ![C Comparison](https://user-images.githubusercontent.com/113164818/223066858-52f48702-57ca-420d-b730-f006f8d6a94d.png)
 ![P Comparison](https://user-images.githubusercontent.com/113164818/223066859-b326e54a-4833-4b17-ac19-79f38121ad67.png)
 During the chart we can see that the C speed are still quicker than the Python.
@@ -67,6 +67,7 @@ During the chart we can see that the C speed are still quicker than the Python.
 [test_runner.py](https://github.com/lidudu810/5008midterm/blob/main/test_runner.py). -- run script to help with tests and keep timings
 
 Initially, I began writing code in C as I had prior experience with it from the examples given in class. Eventually, I transitioned to Python and replicated the same code examples. However, I soon found myself experimenting with different implementations in Python before updating the C versions based on those discoveries.
+
 
 ### Language 1: C
 Originally, for the C version, I was taking inspiration from [random Google research](https://www.programiz.com/c-programming/examples/fibonacci-series). They mentioned how to generate it up to n terms And Fibonacci Sequence Up to a Certain Number, these two methods will help me in my subsequent research and study. After reading this, I have an idea, and based on this, I made my own changes and some Format changes.
@@ -122,6 +123,7 @@ In order to make the code more efficient, I needed to add a recursion helper fun
 
 Additionally, for the C versions, I used unsigned long long for my data type as they can store larger numbers than int, and had to write my own print functions along with help functions for the final program.
 
+
 ### Language 2: Python
 For the Python version of the Fibonacci sequence, I initially started with a recursive implementation:
 
@@ -143,6 +145,7 @@ return n
 return fib_dp(n-1) + fib_dp(n-2)
 
 To handle larger values of n more efficiently, I also implemented a "build up" approach where I computed smaller values of n before larger ones. Additionally, I used the Click library to handle program arguments and made use of PyPy to take advantage of its just-in-time compiler to speed up the execution of the code."
+
 
 ### Comparison and Discussion Between Experiences
 In comparing the performance of the iterative and recursive approaches for generating the Fibonacci series in C and Python, it was found that the C implementation ran significantly faster than the Python implementation in every case. Additionally, the iterative approach was found to be faster than the dynamic programming approach, despite the fact that their Big O complexities are the same. However, it should be noted that there are further optimizations that could be applied to the recursive version, such as taking advantage of the symmetry of the sequence, which would be more complex to implement in the iterative version.
