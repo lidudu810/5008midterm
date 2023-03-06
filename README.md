@@ -61,7 +61,9 @@ During the chart we can see that the C speed are still quicker than the Python.
 
 ## Language Analysis
 [Fibonacci.c](https://github.com/lidudu810/5008midterm/blob/main/Fibonacci.c). -- implementation of functions in c
+
 [Fibonacci.py](https://github.com/lidudu810/5008midterm/blob/main/Fibonacci.py). -- implementation of function in python
+
 [test_runner.py](https://github.com/lidudu810/5008midterm/blob/main/test_runner.py). -- run script to help with tests and keep timings
 
 Initially, I began writing code in C as I had prior experience with it from the examples given in class. Eventually, I transitioned to Python and replicated the same code examples. However, I soon found myself experimenting with different implementations in Python before updating the C versions based on those discoveries.
