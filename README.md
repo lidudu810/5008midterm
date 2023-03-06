@@ -45,6 +45,7 @@ For this analysis, I selected Python as my second language. The reason for this 
 ## Empirical Data & Discussion 
 For all empirical results, I maxed out the time interval to 60 seconds. This allowed for execution of code in a timely manner, while still being able to run multiple iterations.
 The iterative and dynamic programming versions are much faster than the recursive versions.
+
 **Recursive Versions**
 
 
