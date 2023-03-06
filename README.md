@@ -48,6 +48,11 @@ The iterative and dynamic programming versions are much faster than the recursiv
 
 **Recursive Versions**
 
+![Recurive C](https://user-images.githubusercontent.com/113164818/223066748-32c7b522-66a1-484a-83b1-638c525fd014.png)
+![Recursive P](https://user-images.githubusercontent.com/113164818/223066771-5d79348d-1902-4d61-81dd-1fe4e4e1f963.png)
+![C Comparison](https://user-images.githubusercontent.com/113164818/223066858-52f48702-57ca-420d-b730-f006f8d6a94d.png)
+![P Comparison](https://user-images.githubusercontent.com/113164818/223066859-b326e54a-4833-4b17-ac19-79f38121ad67.png)
+
 
 
 ## Language Analysis
