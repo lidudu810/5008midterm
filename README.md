@@ -67,6 +67,7 @@ During the chart we can see that the C speed are still quicker than the Python.
 [test_runner.py](https://github.com/lidudu810/5008midterm/blob/main/test_runner.py). -- run script to help with tests and keep timings
 
 Initially, I began writing code in C as I had prior experience with it from the examples given in class. Eventually, I transitioned to Python and replicated the same code examples. However, I soon found myself experimenting with different implementations in Python before updating the C versions based on those discoveries.
+
 ### Language 1: C
 Language 1: C
 
@@ -104,14 +105,61 @@ int main() {
 ```
 
 I referred to this code and made several changes based on this code, which gained a lot of inspiration.
+n terms of the code structure, I added a recursion helper function that computes the Nth number of the Fibonacci series, which is then used by another function to compute every number up to N.
 
-### Language 2: UPDATE
+Here is the updated code for generating the Fibonacci series using recursion in C:
 
+```text
+ull fibonacci_r(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci_r(n-1) + fibonacci_r(n-2);
+}
+```
 
+The above code uses recursion to generate the nth Fibonacci number. It checks if the input n is either 0 or 1, and if so, it returns the corresponding Fibonacci number. Otherwise, it recursively calculates the n-1th and n-2th Fibonacci numbers and returns their sum, which is the nth Fibonacci number.
+
+In order to make the code more efficient, I needed to add a recursion helper function that would either only generate the nth number, or that would generate every number up to n.
+
+Additionally, for the C versions, I used unsigned long long for my data type as they can store larger numbers than int, and had to write my own print functions along with help functions for the final program.
+
+### Language 2: Python
+For the Python version of the Fibonacci sequence, I initially started with a recursive implementation:
+
+```text
+def fib_r(n: int) -> int:
+if n <= 1:
+return n
+return fib_r(n-1) + fib_r(n-2)
+```
+
+However, this recursive approach quickly becomes inefficient as n grows larger, so I implemented a dynamic programming version using a cache to avoid recomputing already-calculated values:
+
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def fib_dp(n: int) -> int:
+if n <= 1:
+return n
+return fib_dp(n-1) + fib_dp(n-2)
+
+To handle larger values of n more efficiently, I also implemented a "build up" approach where I computed smaller values of n before larger ones. Additionally, I used the Click library to handle program arguments and made use of PyPy to take advantage of its just-in-time compiler to speed up the execution of the code."
 
 ### Comparison and Discussion Between Experiences
+In comparing the performance of the iterative and recursive approaches for generating the Fibonacci series in C and Python, it was found that the C implementation ran significantly faster than the Python implementation in every case. Additionally, the iterative approach was found to be faster than the dynamic programming approach, despite the fact that their Big O complexities are the same. However, it should be noted that there are further optimizations that could be applied to the recursive version, such as taking advantage of the symmetry of the sequence, which would be more complex to implement in the iterative version.
+
+While the caching mechanism in Python was found to be a simple and effective way to speed up the dynamic programming implementation, the speed difference of nearly a factor of 10 between C and Python implementations may not make the simplicity of caching worth it.
+
+In exploring further optimizations, the idea of "precaching" the sequence was considered. This involved generating and storing the first N numbers of the sequence to a file, which could then be loaded and accessed by the dynamic programming implementation, resulting in faster access times at the cost of a slower start-up time for the program. This idea was inspired by the initial Python runs where the dynamic programming version ran much faster due to the cache remaining in memory and not unloading. Additionally, it was found that since the caching mechanism in Python is a pure function, it is possible to run a separate thread to generate the needed N numbers before the program generates it. While this may not be effective for a single script run, it could be advantageous for an interactive program where a client is requesting various runs of the sequence, or if the sequence is being used for other computations.
 
 
 ## Conclusions / Reflection
+In my experience implementing the Fibonacci sequence algorithm in both Python and C, I found that there were trade-offs between simplicity and performance. C performed faster than Python, but the process of adding caching to Python was simple, making it a viable option in some situations. However, the speed difference between the two languages may not always justify the additional effort required for optimization.
 
+In addition, I found that the iterative code was more complex to write and debug than the other versions. Despite this, it may be a better option for certain applications where performance is critical.
 
+Overall, my experiences highlighted the trade-offs between simplicity and performance when choosing between Python and C, as well as the importance of optimizing algorithms and utilizing specific language features.
+
+## References
+1. "Programiz. (n.d.). Fibonacci Series Program in C. Retrieved from https://www.programiz.com/c-programming/examples/fibonacci-series"
