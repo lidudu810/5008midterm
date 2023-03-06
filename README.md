@@ -60,11 +60,48 @@ During the chart we can see that the C speed are still quicker than the Python.
 
 
 ## Language Analysis
+[Fibonacci.c](https://github.com/lidudu810/5008midterm/blob/main/Fibonacci.c). -- implementation of functions in c
+[Fibonacci.py](https://github.com/lidudu810/5008midterm/blob/main/Fibonacci.py). -- implementation of function in python
+[test_runner.py](https://github.com/lidudu810/5008midterm/blob/main/test_runner.py). -- run script to help with tests and keep timings
 
-
+Initially, I began writing code in C as I had prior experience with it from the examples given in class. Eventually, I transitioned to Python and replicated the same code examples. However, I soon found myself experimenting with different implementations in Python before updating the C versions based on those discoveries.
 ### Language 1: C
+Language 1: C
 
+Originally, for the C version, I was taking inspiration from [random Google research](https://www.programiz.com/c-programming/examples/fibonacci-series). They mentioned how to generate it up to n terms And Fibonacci Sequence Up to a Certain Number, these two methods will help me in my subsequent research and study. After reading this, I have an idea, and based on this, I made my own changes and some Format changes.
 
+```text
+#include <stdio.h>
+int main() {
+
+   int i, n;
+
+   // initialize first and second terms
+   int t1 = 0, t2 = 1;
+
+   // initialize the next term (3rd term)
+   int nextTerm = t1 + t2;
+
+   // get no. of terms from user
+   printf("Enter the number of terms: ");
+   scanf("%d", &n);
+
+   // print the first two terms t1 and t2
+   printf("Fibonacci Series: %d, %d, ", t1, t2);
+
+   // print 3rd to nth terms
+   for (i = 3; i <= n; ++i) {
+     printf("%d, ", nextTerm);
+     t1 = t2;
+     t2 = nextTerm;
+     nextTerm = t1 + t2;
+   }
+
+   return 0;
+}
+```
+
+I referred to this code and made several changes based on this code, which gained a lot of inspiration.
 
 ### Language 2: UPDATE
 
