@@ -2,7 +2,7 @@
 * **Author**: Chengyi Li 
 * **GitHub**: https://github.com/lidudu810/5008midterm.git
 * **Semester** Spring 2023
-* **Languages Used**: c, update
+* **Languages Used**: c, Python
 
 ## Overview
 This report compares the speed of different implementations of the Fibonacci series. The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones, starting from 0 and 1. It can be presented mathematically as:
