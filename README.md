@@ -69,8 +69,6 @@ During the chart we can see that the C speed are still quicker than the Python.
 Initially, I began writing code in C as I had prior experience with it from the examples given in class. Eventually, I transitioned to Python and replicated the same code examples. However, I soon found myself experimenting with different implementations in Python before updating the C versions based on those discoveries.
 
 ### Language 1: C
-Language 1: C
-
 Originally, for the C version, I was taking inspiration from [random Google research](https://www.programiz.com/c-programming/examples/fibonacci-series). They mentioned how to generate it up to n terms And Fibonacci Sequence Up to a Certain Number, these two methods will help me in my subsequent research and study. After reading this, I have an idea, and based on this, I made my own changes and some Format changes.
 
 ```text
